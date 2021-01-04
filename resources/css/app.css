@@ -1,3 +1,26 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.app-logo {
+    height: 100px;
+    width: auto;
+}
+.bg-pink {
+    background-color: #ff6161;
+    color: #fff;
+}
+.bg-pink:hover {
+    background-color: #ff9494;
+    color: #fff;
+}
+.bg-pink:focus {
+    background-color: #c4c4c4;
+    color: #fff;
+}
+.bg-primary {
+    background-color: #f4f3f3;
+}
+.secondary {
+    background-color: #ff9494;
+}

@@ -45,14 +45,13 @@
                                 name="password_confirmation" required />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
+            <div class="flex flex-col items-center justify-center mt-10">
+                <x-button class="mt-4 mb-2">
                     {{ __('Register') }}
                 </x-button>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 mt-2 mb-6" href="{{ route('login') }}">
+                    {{ __('Already registered?') }}
+                </a>
             </div>
         </form>
     </x-auth-card>

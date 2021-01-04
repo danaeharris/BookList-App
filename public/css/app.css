@@ -8355,19 +8355,16 @@ select {
   border-color: rgba(224, 231, 255, var(--tw-border-opacity));
 }
 
-.border-indigo-200 {
-  --tw-border-opacity: 1;
-  border-color: rgba(199, 210, 254, var(--tw-border-opacity));
+.border-coral-200 {
+  border-color: rgba(255, 148, 148, .5);
 }
 
-.border-indigo-300 {
-  --tw-border-opacity: 1;
-  border-color: rgba(165, 180, 252, var(--tw-border-opacity));
+.border-coral-300 {
+  border-color: rgba(255, 148, 148, .75);
 }
 
-.border-indigo-400 {
-  --tw-border-opacity: 1;
-  border-color: rgba(129, 140, 248, var(--tw-border-opacity));
+.border-coral-400 {
+  border-color: rgba(255, 148, 148, 1);
 }
 
 .border-indigo-500 {
@@ -8380,9 +8377,8 @@ select {
   border-color: rgba(79, 70, 229, var(--tw-border-opacity));
 }
 
-.border-indigo-700 {
-  --tw-border-opacity: 1;
-  border-color: rgba(67, 56, 202, var(--tw-border-opacity));
+.border-coral-700 {
+  border-color: rgba(255, 97, 97, 1);
 }
 
 .border-indigo-800 {
@@ -31423,6 +31419,34 @@ select {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.app-logo {
+  height: 100px;
+  width: auto;
+}
+
+.bg-pink {
+  background-color: #ff6161;
+  color: #fff;
+}
+
+.bg-pink:hover {
+  background-color: #ff9494;
+  color: #fff;
+}
+
+.bg-pink:focus {
+  background-color: #c4c4c4;
+  color: #fff;
+}
+
+.bg-primary {
+  background-color: #f4f3f3;
+}
+
+.secondary {
+  background-color: #ff9494;
 }
 
 @media (min-width: 640px) {
