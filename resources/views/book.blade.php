@@ -3,7 +3,9 @@
     </x-slot>
     <div class="mx-auto w-9/12 h-auto flex flex-row justify-center" style="margin-top: 100px">
             <div class="flex flex-col max-w-max h-auto">
+                @if($book["image_url"])
                 <img src="{{$book["image_url"]}}" alt="Card image cap"/>
+                @endif
             </div>
         <div class="flex flex-col w-1/2 pl-10 justify-center items-">
             <h2 class="text-xl font-semibold font-karla text-gray-600 py-4">{{$book["title"]}}</h2>
@@ -13,10 +15,8 @@
                 <hr/>
                 <br/>
                 <p class="font-karla font-semibold  text-gray-700">Authors:</p>
-            
-    
                 @foreach ($authors as $author)
-                <a class="font-karla text-gray-700" href="/author/{{$author["id"]}}">{{ $author["name"]}}</a>
+                    <a class="font-karla text-gray-700" href="/author/{{$author["id"]}}">{{ $author["name"]}}</a>
                 @endforeach
 
                 <a class="py-12 text-lg underline text-primary" href="https://openlibrary.org/works/{{$book["open_lib_id"]}}" class="btn btn-primary">

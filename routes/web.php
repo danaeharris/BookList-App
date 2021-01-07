@@ -27,10 +27,13 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\BookController;
 
-Route::get("/search", [Controller::class, "search"]);
-Route::get("/book/{id}", [Controller::class, "book"]);
-Route::get("/author/{id}", [Controller::class, "author"]);
-Route::post("/add/{id}", [Controller::class, "add"])->name('add');
-Route::get("/add/{id}", [Controller::class, "add"])->name('add');
+
+Route::get("/search", [SearchController::class, "search"]);
+Route::post("/book/{id}", [BookController::class, "add"])->name('book');
+Route::get("/book/{id}", [BookController::class, "book"])->name('book');
+Route::get("/author/{id}", [BookController::class, "author"])->name('author');
+Route::post("/add/{id}", [BookController::class, "add"])->name('add');
+Route::get("/add/{id}", [BookController::class, "add"])->name('add');
