@@ -17,6 +17,7 @@ class CreateBooksAndAuthorsTable extends Migration
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
             $table->text('name');
+            $table->text('open_lib_id');
             $table->timestamps();
         });
 
@@ -26,8 +27,6 @@ class CreateBooksAndAuthorsTable extends Migration
             $table->text('description');
             $table->text('image_url');
             $table->text('open_lib_id');
-            $table->unsignedBigInteger('author_id');
-            $table->foreign('author_id')->references('id')->on('authors');
             $table->timestamps();
         });
 

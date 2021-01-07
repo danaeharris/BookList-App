@@ -31,3 +31,6 @@ use App\Http\Controllers\Controller;
 
 Route::get("/search", [Controller::class, "search"]);
 Route::get("/book/{id}", [Controller::class, "book"]);
+Route::get("/author/{id}", [Controller::class, "author"]);
+Route::post("/add/{id}", [Controller::class, "add"])->name('add');
+Route::get("/add/{id}", [Controller::class, "add"])->name('add');
