@@ -29,11 +29,13 @@ require __DIR__.'/auth.php';
 
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UserController;
 
 
 Route::get("/search", [SearchController::class, "search"]);
 Route::post("/book/{id}", [BookController::class, "add"])->name('book');
 Route::get("/book/{id}", [BookController::class, "book"])->name('book');
 Route::get("/author/{id}", [BookController::class, "author"])->name('author');
-Route::post("/add/{id}", [BookController::class, "add"])->name('add');
-Route::get("/add/{id}", [BookController::class, "add"])->name('add');
+Route::get("/user/{id}", [UserController::class, "user"])->name('user');
+Route::post("/add/{id}", [UserController::class, "add"])->name('add');
+Route::get("/add/{id}", [UserController::class, "add"])->name('add');

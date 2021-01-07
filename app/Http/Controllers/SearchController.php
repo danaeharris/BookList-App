@@ -8,7 +8,7 @@ use App\Http\Controllers\Utilities;
 use App\Http\Controllers\Controller;
 
 
-class SearchController  extends BaseController
+class SearchController  extends Controller
 {
    public function search(Request $request)
     {

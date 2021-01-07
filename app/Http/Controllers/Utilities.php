@@ -8,9 +8,7 @@ use App\Models\Author;
 use App\Models\Book;
 
 class Utilities
-{   
-
-    
+{
     public static function CallAPI($method, $url, $data = false)
     {
         $curl = curl_init();

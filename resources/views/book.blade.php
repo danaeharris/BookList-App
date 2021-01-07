@@ -23,11 +23,8 @@
                 <p class="font-semibold font-karla">View on Open Library</p>
             </a>
             <div class="flex flex-col items-center justify-center">
-                <form method="POST" action="{{ route('dashboard') }}">
-                    <x-button class="mt-4 mb-4">
-                        {{ __('Add to my list') }}
-                    </x-button>
-                </form>
+                
+                <a href="/add/{{$book->id}}">Add to my list</a>
             </div>
         </div>
     </div>

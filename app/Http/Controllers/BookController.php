@@ -9,7 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 use App\Models\Author;
 use App\Models\Book;
 
-class BookController extends BaseController
+class BookController extends Controller
 {
     public function author($id)
     {

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Book extends Model
 {
     use HasFactory;
@@ -20,6 +21,11 @@ class Book extends Model
     public function authors()
     {
         return $this->belongsToMany(Author::class, 'book_authors',  'book_id', 'author_id');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_books',  'book_id', 'user_id')->using(UserBook::class);
     }
 
     //protected $table = 'books';
