@@ -8,6 +8,10 @@ use App\Http\Controllers\Utilities;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Author;
 use App\Models\Book;
+use App\Models\User;
+use App\Models\UserBook;
+use Illuminate\Support\Facades\Auth;
+
 
 class BookController extends Controller
 {
@@ -29,17 +33,25 @@ class BookController extends Controller
     {
         //Get the book from the id.
         $dbBook = Utilities::getBook($id);
+        $dbBookId = $dbBook->id;
+
+        $userId = Auth::id();
+
+        $dbUser = User::find($userId);
+
+        $dbUserBook = UserBook::where([['book_id', '=', $dbBookId], ['user_id', '=', $userId]])->first();
+
+
+        //Check if a UserBook record exists for this user and this book.
 
         //Return a view with the book data.
         $pageData = [
             "book" => $dbBook,
-            "authors" => $dbBook->authors
+            "authors" => $dbBook->authors,
+            "userBook" => $dbUserBook,
+            //pass that userbook record to the view.
         ];
         return view("book")->with($pageData);
     }
 
-    public function add($id)
-    {
-        //TODO: add a book to your list.
-    }
 }

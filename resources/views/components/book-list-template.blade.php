@@ -22,12 +22,7 @@
                                 </div>
                                 @endif
                             @endauth
-                            <p class="text-xs font-light font-karla text-gray-500 pt-2 pb-1 text-center">Rate this book</p>
-                            <div class="flex justify-center">
-                                @for ($i = 0; $i < 5; $i++)
-                                    <img class="w-3 h-3 opacity-50"src="/images/grayStar.svg" alt="gray star"/>
-                                @endfor
-                            </div>
+                            <x-rate-this-book  :book="$book" :rating="$book->pivot->rating"/>
                         </div>
                     </div>
                 @endforeach

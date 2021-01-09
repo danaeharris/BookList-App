@@ -33,9 +33,10 @@ use App\Http\Controllers\UserController;
 
 
 Route::get("/search", [SearchController::class, "search"]);
-Route::post("/book/{id}", [BookController::class, "add"])->name('book');
+//Route::post("/book/{id}", [BookController::class, "add"])->name('book');
 Route::get("/book/{id}", [BookController::class, "book"])->name('book');
 Route::get("/author/{id}", [BookController::class, "author"])->name('author');
 Route::get("/user/{id}", [UserController::class, "user"])->name('user');
-Route::post("/add/{id}", [UserController::class, "add"])->name('add');
+//Route::post("/add/{id}", [UserController::class, "add"])->name('add');
 Route::get("/add/{id}", [UserController::class, "add"])->name('add');
+Route::get("/remove/{id}", [UserController::class, "remove"])->name('remove');

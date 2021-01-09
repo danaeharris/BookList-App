@@ -21,10 +21,10 @@ class UserController extends Controller
         //var_dump($dbAuthor);
         $pageData = [
             "name" => $dbUser->name,
-            "books" => $dbUser->books
+            "books" => $dbUser->books,
         ];
 
-        // var_dump($pageData);
+        // var_dump($dbUser->books);
         return view("user")->with($pageData);
     }
 
@@ -49,9 +49,22 @@ class UserController extends Controller
             'date_completed' => 0,
             'status' => 'unread',
             'open_lib_id' => '',
+            'rating' => 0,
         ]
     );
+
     return redirect()->route('book', ['id' => $dbBook->open_lib_id]);
-    
+    }
+
+    public function remove($id)
+    {
+
+      $userId = Auth::id();
+
+      $dbBook = Book::find($id);
+      $userBook = UserBook::where([['book_id', '=', $id], ['user_id', '=', $userId]])->first();
+      $userBook->delete();
+
+    return redirect()->route('book', ['id' => $dbBook->open_lib_id]);
     }
 }

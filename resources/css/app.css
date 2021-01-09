@@ -24,3 +24,10 @@
 .primaryText {
     color: #ff6161;
 }
+.rating a {
+    color: #d1d5db;
+}
+.rating > a:hover,
+.rating > a:hover ~ a {
+    color: #ffdb5d;
+}

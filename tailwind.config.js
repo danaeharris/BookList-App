@@ -11,6 +11,7 @@ module.exports = {
                 lightGray: "#F4F3F3",
                 mediumGray: "#ECE9E9",
                 darkGray: "#C4C4C4",
+                gold: "#ffdb5d",
               },
             fontFamily: {
                 'open-sans': ['Open Sans', 'sans-serif'],

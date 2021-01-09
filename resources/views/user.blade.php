@@ -7,7 +7,7 @@
                 <h2 class="text-2xl font-semibold font-karla text-primary py-4">My Book List</h2>
 
             @else
-                <h2 class="text-2xl font-semibold font-karla text-primary py-4">Someone Else's Book List</h2>
+                <h2 class="text-2xl font-semibold font-karla text-primary py-4">{{$name}}'s Book List</h2>
 
             @endif
         @endauth
